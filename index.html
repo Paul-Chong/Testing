@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+     integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+     crossorigin="anonymous" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Project Page</title>
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <img class=tmlogo src="tmlogo.png" />
+        <div class="logo_name">TicketMaster</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="#">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+         <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+       <a href="#">
+         <i class='bx bx-book' ></i>
+         <span class="links_name">Projects</span>
+       </a>
+       <span class="tooltip">Project</span>
+     </li>
+    </ul>
+  </div>
+  <section class="home-section">
+      <div class="text">Projects</div>
+      <div class="container">
+        <h1 class="center"> Create your project here</h1>
+        <div class="flex">
+                <input type="text" id="project" placeholder="Enter project">
+                <button onclick="addProject()">Submit</button>
+        </div>
+        <table>
+                <tr>
+                        <td>
+                                <div class="myproject">Project Name</div>
+                        </td>
+                        <td>
+                                <div class="mystatus">Status</div>
+                        </td>
+                        <td>
+                                <div class="trash">T</div>
+                        </td>
+                        <td>
+                                <div class="mytickets">Ticket Page</div>
+                        </td>
+                </tr>
+        </table>
+      </div>
+      <script src="script.js"></script>
+  </section>
+
+  <!-- This is for the sandwich dropdown thing top maximize and minimize the side bar-->
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();
+  });
+
+  </script>
+</body>
+</html>
